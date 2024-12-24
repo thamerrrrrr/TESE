@@ -1,0 +1,120 @@
+
+.form-field input {
+    width: 30%;
+}
+
+.user-form {
+    margin-top: 50px;
+    
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('./img/HOTEL_IMAGE.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+input,
+select {
+    width: 30%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(81, 103, 129, 0.7);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0066cc;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+table {
+    width: 100%;
+    border: black 3px solid;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-collapse: collapse;
+    
+    
+}
+
+th,td{
+    border: black 3px solid;
+    padding: 5px;
+
+}
+.form-field{
+    color: white;
+}
+
+.form-field select {
+    color: #f4f4f4;
+}
+
+.form-field select option {
+    color: black;
+}
+
+.add:hover,
+.edit:hover {
+    background: linear-gradient(45deg, #004d99, #0066cc);
+    transform: scale(1.05);
+}
+
+.add,
+.edit {
+    background-color: #2f4f4f;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5em;
+    position: sticky;
+    top: 0px;
+    
+}
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar a:hover {
+    color: aquamarine;
+}
+.infotable{
+    border: black 3px solid;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0px;
+}
+.button{
+    background-color: rgb(0, 102, 204);
+    border-radius: 3px;
+}
+.button:focus{
+    background-color: #004d99;
+    border-radius: 3px;
+}
+.button:hover{
+    background-color: aquamarine;
+    border-radius: 4px;
+
+}

@@ -1,0 +1,171 @@
+
+package prooject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
+public class Prooject {
+
+   
+    public static void main(String[] args) {
+           
+      Doublelinkedlist dl=new Doublelinkedlist ();
+        BinarySearchtree bs=new BinarySearchtree();
+        HashMap<Integer,Integer> h=new HashMap();      
+        long m = System.currentTimeMillis();
+        while(dl.size<=5000)
+        {
+            double g= Math.random()*(10000-1+1)+1;
+            int b=(int)g;
+            if(!dl.search(b));
+            dl.Add(b);
+        }
+        long n=System.currentTimeMillis();
+        long addd=n-m;
+        m=System.currentTimeMillis();
+        while(bs.size<=5000)
+        {
+            double a= Math.random()*(10000 -1+1)+1;
+            int b=(int)a;
+            bs.insert(b);
+        }
+        n=System.currentTimeMillis();
+        long addbs=n-m;
+        m=System.currentTimeMillis();
+        while(h.size()<=5000)
+        {
+            double i = Math.random()*(10000-1+1)+1;
+            int b=(int)i;
+                h.put(b, b);          
+        }
+        n=System.currentTimeMillis();
+        long addm=n-m;
+
+        
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++)
+        {
+            double t = Math.random()*(10000-1+1)+1;
+            int b=(int)t;
+            dl.update(b, 1000);
+        }
+        n=System.currentTimeMillis();
+        long updated=n-m;
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++)
+        {
+            double z= Math.random()*(10000-1+1)+1;
+            int b=(int)z;
+            double d = Math.random()*(10000-1+1)+1;
+            int c=(int)d;
+            bs.update(b, c);
+        }
+        n=System.currentTimeMillis();
+        long updatebs=n-m;
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++)
+        {
+            double j = Math.random()*(10000-1+1)+1;
+            int b=(int)j; 
+            double w = Math.random()*(10000-1+1)+1;
+            int c=(int)w;
+                h.replace(c,b);
+        }
+        n=System.currentTimeMillis();
+        long updatem=n-m;
+        
+        
+        
+        
+        
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++)
+        {
+            double s = Math.random()*(10000-1+1)+1;
+            int b=(int)s;
+            dl.search(b);
+        }
+        n=System.currentTimeMillis();
+        long searchd=n-m;
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++)
+        {
+            double x= Math.random()*(10000-1+1)+1;
+            int b=(int)x;
+            bs.search(b);
+        }
+        n=System.currentTimeMillis();
+        long searchbs=n-m;
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++)
+        {
+            double k = Math.random()*(10000-1+1)+1;
+            int b=(int)k;  
+            
+                h.containsValue(b);
+        }
+        n=System.currentTimeMillis();
+        long searchm=n-m;
+   
+        
+        
+        m=System.currentTimeMillis();
+        System.out.println("DoublyLinkedList:"+dl);
+        n=System.currentTimeMillis();
+        long printd=n-m;
+        m=System.currentTimeMillis();
+        System.out.print("BainarySearchTree:");
+        System.out.println(bs);
+        n=System.currentTimeMillis();
+        long printbs=n-m;
+        m=System.currentTimeMillis();
+        ArrayList<Integer>a=new ArrayList<>(h.values());
+        a.sort(null);
+        System.out.println("Map:"+a);
+        n=System.currentTimeMillis();
+        long printm=n-m;
+        
+        
+        
+        
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++){
+            double v = Math.random()*(10000-1+1)+1;
+            int b=(int)v;
+            dl.Delete(b);
+        }
+        n=System.currentTimeMillis();
+        long removed=n-m;
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++){
+            double v = Math.random()*(10000-1+1)+1;
+            int b=(int)v;
+            bs.delete(b);
+        }
+        n=System.currentTimeMillis();
+        long removebs=n-m;
+        m=System.currentTimeMillis();
+        for(int i=0;i<5000;i++){
+            double v = Math.random()*(10000-1+1)+1;
+            int b=(int)v;
+               h.remove(b);
+        }
+        n=System.currentTimeMillis();
+        long removem=n-m;
+        
+        System.out.println("");
+        System.out.println("");
+        System.out.println("  "+"Operation :"+"       Insert"+"     Remove"+"    Search"+"        Update"+"    Print");
+        System.out.println("DataStructurs :");
+        System.out.println("BinarySearchTree :      "+addbs+"ms     "+removebs+"ms       "+searchbs+"ms         "+updatebs+"ms         "+printbs+"ms");
+        System.out.println("DoublyLinkedList :      "+addd+"ms      "+removed+"ms      "+searchd+"ms       "+updated+"ms        "+printd+"ms");
+        System.out.println("HashMap :               "+addm+"ms       "+removem+"ms       "+searchm+"ms       "+updatem+"ms       "+printm+"ms");        
+        
+    }
+    
+}
+       
+    
+    
+
